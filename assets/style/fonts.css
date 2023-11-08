@@ -1,2 +1,101 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* 
+font-family: 'Palanquin'
+font-family: 'Poppins'
+font-family: 'Rubik'
+*/
 
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Palanquin:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.header__section1__left {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header__section1__right ul li {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header__section2__left .navbar-brand {
+  font-family: "Palanquin";
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.header__section2__middle form input {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+.header__section2__right {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header__section3 .container .links li a {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer__section2__left .footer__section2__left__head {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__section2__left__body .mail {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__section2__left__body .phone {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__section2__left__head {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer__section2__left__body .mail {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer__section2__left__body .phone {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+}
+.footer__section2__left__foot button {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footerLinks {
+  font-size: "Rubik";
+  font-size: 18px;
+  font-weight: 500;
+}
+.footerList li a {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer__section3__left .res {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer__section3__right i{
+    font-size: 21px;
+}
