@@ -1,5 +1,5 @@
 .off {
-  width: 30%;
+  width: 50%;
   height: 100%;
 }
 .main__section1 .firstItem a {
@@ -18,6 +18,7 @@
 .accordion-item {
   border: 1px solid #d0d0d0 !important;
   margin-right: 10px;
+  width: 100%;
 }
 .accordion-button {
   color: #212121 !important;
@@ -43,9 +44,12 @@ form {
   background-color: #ef544f;
 }
 .row .col .card {
-  width: 360px;
+  width: 380px;
   height: 508px;
   border: none;
+  position: relative;
+  margin: 0 auto;
+  background-color: #f9f9f9;
 }
 .row .col .card img {
   width: 218px;
@@ -62,35 +66,63 @@ form {
 
 .card-old-price {
   color: rgba(54, 54, 54, 0.75);
+}
+.addToCardBtn {
+  color: #212121;
+  width: 90%;
+}
 
-}
-.addToCardBtn{
-    color: #212121;
-    width: 90%;
-
-}
-.card{
-    position: relative;
-}
-.topText{
-    top: 16px;
-    left: 16px;
-    position: absolute;
-  color: #FFF;
+.topText {
+  top: 16px;
+  left: 16px;
+  position: absolute;
+  color: #fff;
   width: 79px;
   height: 32px;
   border-radius: 8px;
-background-color: #DF4244;
+  background-color: #df4244;
 }
 
-.favoriteBtn{
-    width: 22px;
-height: 22px;
-border: none;
-background-color: #FFF;
-position: absolute;
-top: 16px;
-right: 16px;
-font-size: 22px;
+.favoriteBtn {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: #fff;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 22px;
+}
 
+.sizeInput {
+  color: rgba(33, 33, 33, 0.75);
+  width: 64px;
+  height: 40px;
+  border: 1px solid #c8c8c8 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .containerTop .main__section2__left {
+    font-size: 30px;
+  }
+  .mainContainer {
+    flex-direction: column;
+  }
+  .off {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .containerTop .main__section2 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .containerTop .main__section2__left {
+    margin: 0 auto;
+  }
+  .containerTop .main__section2__right {
+    margin: 0 auto;
+  }
 }

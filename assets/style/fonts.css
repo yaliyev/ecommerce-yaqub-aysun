@@ -117,7 +117,7 @@ font-family: 'Rubik'
   font-size: 40px;
   font-weight: 500;
 }
-.main__section2__right span{
+.main__section2__right span {
   font-family: "Poppins";
   font-size: 16px;
   font-weight: 400;
@@ -135,30 +135,35 @@ form {
   font-weight: 400;
 }
 
-
-.card-text{
+.card-text {
   font-family: "Rubik";
   font-size: 16px;
   font-weight: 400;
 }
-.card-price{
+.card-price {
   font-family: "Poppins";
   font-size: 20px;
   font-weight: 600;
 }
-.card-old-price{
-font-family: "Poppins";
-font-size: 16px;
-font-weight: 400;
+.card-old-price {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.addToCardBtn{
+.addToCardBtn {
   font-family: "Poppins";
-font-size: 16px;
-font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
 }
-.topText{
-font-family: "Poppins";
-font-size: 16px;
-font-weight: 500;
+.topText {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+}
+.sizeInput {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+
 }
