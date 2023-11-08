@@ -1,25 +1,55 @@
-.commercial-hero{
+.commercial-hero {
     background-color: #FFE2E0;
 }
-.mobile-commercial-hero{
+
+.mobile-commercial-hero {
     display: none;
 }
-.commercial-hero-row{
+
+.commercial-hero-row {
     margin: 0 auto;
     width: 80%;
     padding: 50px 0;
 }
-.discount-amount{
+
+.discount-amount {
     margin-top: 120px;
 }
-.hero-info{
+
+.hero-info {
     width: 60%;
 }
+
+/* ADVANTAGES*/
+.advantages {
+    padding: 50px 0;
+    background-color: #F7F7F7;
+}
+
+.advantage {
+    display: flex;
+    column-gap: 10px;
+}
+
+.advantage .advantage-icon i {
+    color: rgb(0, 140, 255);
+    font-size: 28px;
+}
+
 @media screen and (max-width: 768px) {
-    .desktop-commercial-hero{
+    .desktop-commercial-hero {
         display: none;
     }
-    .mobile-commercial-hero{
+
+    .mobile-commercial-hero {
         display: block;
     }
+}
+
+@media screen and (max-width: 567px) {
+  .advantage{
+    margin-left: 30px;
+    
+    
   }
+}
