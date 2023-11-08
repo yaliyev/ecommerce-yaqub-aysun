@@ -49,8 +49,21 @@
     margin-top: 30px;
     font-weight: 500;
 }
-
-
+.product-image{
+    height: 450px;
+    object-fit: contain;
+}
+.product-price{
+    font-weight: 500;
+}
+.product-add-to-cart{
+    transition: 0.3s background-color;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.product-add-to-cart:hover{
+    background-color: #6C757D !important;
+    color: white !important;
+}
 @media screen and (max-width: 992px) {
     .bag-col-title{
         display: none;
