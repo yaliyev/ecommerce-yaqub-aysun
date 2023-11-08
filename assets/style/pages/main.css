@@ -1,9 +1,13 @@
 .commercial-hero{
     background-color: #FFE2E0;
 }
+.mobile-commercial-hero{
+    display: none;
+}
 .commercial-hero-row{
     margin: 0 auto;
     width: 80%;
+    padding: 50px 0;
 }
 .discount-amount{
     margin-top: 120px;
@@ -11,3 +15,11 @@
 .hero-info{
     width: 60%;
 }
+@media screen and (max-width: 768px) {
+    .desktop-commercial-hero{
+        display: none;
+    }
+    .mobile-commercial-hero{
+        display: block;
+    }
+  }
