@@ -1,0 +1,172 @@
+.header__section1 {
+  background: #007878;
+  padding: 14px 0;
+}
+.header__section1__left {
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  transition: 0.3s linear;
+  &:hover {
+    color: white;
+  }
+}
+
+.header__section1__right ul li {
+  color: rgba(255, 255, 255, 0.75);
+}
+.header__section1__right ul li a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: 0.3s linear;
+  &:hover {
+    color: white;
+  }
+}
+.header__section2 {
+  margin-top: 28px;
+  width: 100%;
+  background: #fff;
+}
+.header__section2__left .navbar-brand {
+  color: #000;
+}
+.formSearch {
+  position: relative;
+}
+.searchGlasses {
+  position: absolute;
+  right: 0;
+  font-size: 18px;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.header__section2__middle form input {
+  width: 504px;
+  height: 48px;
+  padding: 15px 40px 15px 16px;
+  color: #aaaaaa;
+}
+
+.header__section2__right {
+  color: #2e2e2e;
+}
+.header__section2__right a {
+  color: #2e2e2e;
+}
+.header__section2__right .singUp,
+.wishlist,
+.basket {
+  cursor: pointer;
+}
+.header__section3 .container .links li a {
+  color: #273142;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__section2 .container {
+    display: flex;
+  }
+  .header__section2__left .navbar-brand {
+    font-size: 35px;
+  }
+  .header__section2__right {
+    font-size: 12px;
+  }
+  .header__section2__right svg {
+    width: 20px;
+    height: 20px;
+  }
+  .header__section2__middle form input {
+    width: 400px;
+    height: 48px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header__section2 .container {
+    display: flex;
+  }
+  .header__section2__left .navbar-brand {
+    font-size: 28px;
+  }
+  .header__section2__right {
+    font-size: 10px;
+  }
+  .header__section2__right svg {
+    width: 18px;
+    height: 18px;
+  }
+  .header__section2__middle form input {
+    width: 300px;
+    height: 48px;
+  }
+  .header__section3 .container .links li a {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__section2 .container {
+    display: flex;
+  }
+  .header__section2__left .navbar-brand {
+    font-size: 22px;
+  }
+  .header__section2__right {
+    font-size: 10px;
+  }
+  .header__section2__right svg {
+    width: 15px;
+    height: 15px;
+  }
+  .header__section2__middle form input {
+    width: 180px;
+    height: 48px;
+    font-size: 12px;
+  }
+  .header__section3 .container .links {
+    display: flex;
+    column-gap: 25px !important;
+  }
+  .header__section3 .container .links li a {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .header__section1 .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .header__section2 .container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+  }
+  .header__section2__left .navbar-brand {
+    font-size: 40px;
+  }
+  .header__section2__right {
+    font-size: 15px;
+  }
+  .header__section2__right svg {
+    width: 24px;
+    height: 24px;
+  }
+  .header__section2__middle form input {
+    width: 350px;
+    height: 48px;
+  }
+  .header__section3 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__section3 .container .links {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+  .header__section3 .container .links li a {
+    font-size: 14px;
+  }
+}
