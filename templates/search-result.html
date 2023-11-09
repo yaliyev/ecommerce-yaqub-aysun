@@ -20,6 +20,7 @@
     <!-- Footer Css -->
     <link rel="stylesheet" href="../assets/style/footer.css" />
     <link rel="stylesheet" href="../assets/style/pages/main.css">
+    <link rel="stylesheet" href="../assets/style/pages/product.css">
 
     <title>Home Page</title>
 </head>
@@ -129,6 +130,184 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
+
+
+                    <div class="accordion-side off offcanvas-start show text-bg-white" tabindex="-12" id="offcanvasDark"
+                        aria-labelledby="offcanvasDarkLabel">
+                        <div class="offcanvas-body">
+                            <div class="firstAccord mb-5">
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2>
+                                            <button class="accordion-button border-0 text-black bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                                Categories
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body d-flex flex-column row-gap-3">
+                                                <option value="Backpacks">Backpacks</option>
+                                                <option value="Belt Bags">Belt Bags</option>
+                                                <option value="Handbags">Handbags</option>
+                                                <option value="Shoulder bags">Shoulder bags</option>
+                                                <option value="Evening bags">Evening bags</option>
+                                                <option value="Postman bag">Postman bag</option>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="secondAccord mb-5">
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2>
+                                            <button class="accordion-button border-0 text-black bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                                                Material
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body d-flex flex-column row-gap-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Cloth"
+                                                        id="flexCheckDefault" />
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Cloth
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Cotton"
+                                                        id="flexCheckDefault" />
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Cotton
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        value="Denim - Jeans" id="flexCheckDefault" />
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Denim - Jeans
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        value="Exotic Leathers" id="flexCheckDefault" />
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Exotic Leathers
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Faux Fur"
+                                                        id="flexCheckDefault" />
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Faux Fur
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="Glitter"
+                                                        id="flexCheckDefault" />
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                        Glitter
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="thirdAccord mb-5">
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2>
+                                            <button class="accordion-button border-0 text-black bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                                                Material
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body d-flex flex-column row-gap-3">
+                                                <form action="#"
+                                                    class="d-flex align-items-center justify-content-center column-gap-3">
+                                                    <div
+                                                        class="d-flex align-items-center justify-content-center column-gap-2">
+                                                        <input type="number" class="form-control priceInpOne"
+                                                            placeholder="Min..." />
+                                                        <span>–</span>
+                                                        <input type="number" class="form-control priceInpTwo"
+                                                            placeholder="Max..." />
+                                                    </div>
+                                                    <button class="searchPriceBtn btn text-white">
+                                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fourthAccord mb-5">
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2>
+                                            <button class="accordion-button border-0 text-black bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                                                Size
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body d-flex flex-column row-gap-3">
+                                                <form action="#"
+                                                    class="d-flex align-items-center justify-content-center column-gap-3">
+                                                    <input type="radio" class="btn-check" name="options-base"
+                                                        id="option5" autocomplete="off" />
+                                                    <label class="btn btn-outline-secondary sizeInput"
+                                                        for="option5">XS</label>
+
+                                                    <input type="radio" class="btn-check" name="options-base"
+                                                        id="option6" autocomplete="off" />
+                                                    <label class="btn btn-outline-secondary sizeInput"
+                                                        for="option6">S</label>
+                                                    <input type="radio" class="btn-check" name="options-base"
+                                                        id="option7" autocomplete="off" />
+                                                    <label class="btn btn-outline-secondary sizeInput"
+                                                        for="option7">M</label>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="fifthAccord mb-5">
+                                <div class="accordion" id="accordionPanelsStayOpenExample">
+                                    <div class="accordion-item">
+                                        <h2>
+                                            <button class="accordion-button border-0 text-black bg-white" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                                                aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+                                                Color
+                                            </button>
+                                        </h2>
+                                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse show"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="accordion-body d-flex flex-column row-gap-3"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
                 <div class="col-8">
