@@ -1,13 +1,99 @@
-.commercial-hero{
+.commercial-hero {
     background-color: #FFE2E0;
 }
-.commercial-hero-row{
+
+.mobile-commercial-hero {
+    display: none;
+}
+
+.commercial-hero-row {
     margin: 0 auto;
     width: 80%;
+    padding: 50px 0;
 }
-.discount-amount{
+
+.discount-amount {
     margin-top: 120px;
 }
-.hero-info{
+
+.hero-info {
     width: 60%;
+}
+
+/* ADVANTAGES*/
+.advantages {
+    padding: 50px 0;
+    background-color: #F7F7F7;
+}
+
+.advantage {
+    display: flex;
+    column-gap: 10px;
+}
+
+.advantage .advantage-icon i {
+    color: rgb(0, 140, 255);
+    font-size: 28px;
+}
+.bags{
+    padding: 50px 0;
+}
+.bag{
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    height: 130px;
+    position: relative;
+}
+.bag-title{
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: 500;
+}
+.products-section-title-box{
+    width: 98%;
+}
+.product{
+    width: 95%;
+}
+.product-image{
+    height: 450px;
+    object-fit: contain;
+}
+.product-price{
+    font-weight: 500;
+}
+.product-add-to-cart{
+    transition: 0.3s background-color;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.product-add-to-cart:hover{
+    background-color: #6C757D !important;
+    color: white !important;
+}
+@media screen and (max-width: 992px) {
+    .bag-col-title{
+        display: none;
+    }
+    .bag img{
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-commercial-hero {
+        display: none;
+    }
+
+    .mobile-commercial-hero {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 567px) {
+  .advantage{
+    margin-left: 30px;
+    
+    
+  }
 }
