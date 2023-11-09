@@ -49,6 +49,12 @@
     margin-top: 30px;
     font-weight: 500;
 }
+.products-section-title-box{
+    width: 98%;
+}
+.product{
+    width: 95%;
+}
 .product-image{
     height: 450px;
     object-fit: contain;
