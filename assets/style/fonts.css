@@ -96,6 +96,74 @@ font-family: 'Rubik'
   font-weight: 400;
 }
 
-.footer__section3__right i{
-    font-size: 21px;
+.footer__section3__right i {
+  font-size: 21px;
+}
+
+.main__section1 .firstItem a {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.main__section1 .secondItem {
+  font-family: "Poppins";
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.main__section2__left h1 {
+  font-family: "Rubik";
+  font-size: 40px;
+  font-weight: 500;
+}
+.main__section2__right span {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+.accordion-button {
+  font-family: "Rubik";
+  font-size: 20px !important;
+  font-weight: 500;
+}
+.accordion-body option,
+label,
+form {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card-text {
+  font-family: "Rubik";
+  font-size: 16px;
+  font-weight: 400;
+}
+.card-price {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+}
+.card-old-price {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.addToCardBtn {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+}
+.topText {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 500;
+}
+.sizeInput {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-weight: 400;
+
 }
