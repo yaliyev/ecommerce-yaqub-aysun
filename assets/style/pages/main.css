@@ -70,6 +70,11 @@
     background-color: #6C757D !important;
     color: white !important;
 }
+.shopping-bag-item [class$="-btn"]{
+    background-color: white;
+    border: none;
+}
+
 @media screen and (max-width: 992px) {
     .bag-col-title{
         display: none;

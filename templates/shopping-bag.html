@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reset Css -->
+    <link rel="stylesheet" href="../assets/style/reset.css" />
+    <!-- Fonts Css -->
+    <link rel="stylesheet" href="../assets/style/fonts.css" />
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap Css CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Header Css -->
+    <link rel="stylesheet" href="../assets/style/header.css" />
+    <!-- Footer Css -->
+    <link rel="stylesheet" href="../assets/style/footer.css" />
+    <link rel="stylesheet" href="../assets/style/pages/main.css">
+    <link rel="stylesheet" href="../assets/style/pages/product.css">
+
+    <title>Home Page</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="header__section1">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="header__section1__left column-gap-2 d-flex align-items-center justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_1_1278)">
+                            <path
+                                d="M0.761715 3.41154C0.761715 2.75291 1.00753 2.11172 1.45399 1.62228C1.95304 1.07503 2.66427 0.76123 3.40475 0.76123L6.9532 0.76123C8.29985 0.76123 9.42869 1.7662 9.57879 3.09885C9.66723 3.88313 9.82873 4.66206 10.0588 5.41435C10.3467 6.35588 10.0968 7.37006 9.40631 8.06069L7.96861 9.49852C9.47511 12.2521 11.7713 14.5483 14.5243 16.0546L15.9621 14.6166C16.6528 13.9262 17.6669 13.6762 18.6086 13.9643C19.3609 14.1944 20.1398 14.3559 20.924 14.4443C22.2567 14.5943 23.2617 15.7231 23.2617 17.0698L23.2617 20.6181C23.2617 21.3587 22.9479 22.0699 22.4007 22.569C21.8513 23.0702 21.1107 23.3184 20.369 23.2501C17.8229 23.0158 15.3646 22.341 13.0621 21.2443C10.8237 20.1782 8.7967 18.7456 7.0371 16.986C5.27764 15.2265 3.84475 13.1994 2.7788 10.9609C1.68223 8.65834 1.00726 6.20001 0.772838 3.65393C0.765283 3.57304 0.761715 3.49229 0.761715 3.41154ZM8.41823 6.19672C8.41823 6.10773 8.4049 6.01723 8.37785 5.92865C8.1161 5.07309 7.93249 4.18732 7.83197 3.29564C7.78212 2.85303 7.40432 2.51904 6.9532 2.51904L3.40475 2.51904C3.15344 2.51904 2.9219 2.62135 2.75271 2.80702C2.58119 2.99475 2.49975 3.23837 2.52337 3.49271C3.40269 13.0471 10.976 20.6203 20.5302 21.4997C20.7846 21.5232 21.0282 21.4416 21.2161 21.2704C21.4016 21.1009 21.5039 20.8694 21.5039 20.6181L21.5039 17.0698C21.5039 16.6186 21.1701 16.2408 20.7273 16.1908C19.8356 16.0905 18.9499 15.9068 18.0943 15.6452C17.7757 15.5477 17.435 15.6297 17.2051 15.8596L14.864 18.2007L14.2981 17.9191C10.77 16.1638 7.85998 13.2534 6.10423 9.72456L5.82243 9.15863L8.16348 6.81772C8.32924 6.65196 8.41823 6.42839 8.41823 6.19672Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1_1278">
+                                <rect width="24" height="24" fill="white" transform="translate(24) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>+748 383 23 14</span>
+                </div>
+                <div class="header__section1__right d-flex align-items-center justify-content-center">
+                    <ul class="d-flex column-gap-3 align-items-center justify-content-center">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li>|</li>
+                        <li><a href="#">FAQ</a></li>
+                        <li>|</li>
+                        <li><a href="#">Customer service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="header__section2">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="header__section2__left">
+                    <h1 class="navbar-brand">Snobella</h1>
+                </div>
+                <div class="header__section2__middle">
+                    <form action="#" class="formSearch d-flex align-items-center justify-content-center">
+                        <input type="text" id="searchInpt" class="form-control" placeholder="Search all product" />
+                        <i class="fa-solid fa-magnifying-glass searchGlasses"></i>
+                    </form>
+                </div>
+                <div class="header__section2__right d-flex align-items-center justify-content-center column-gap-4">
+                    <div class="singUp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M15.6186 11.1284C17.1543 10.0084 18.1544 8.19581 18.1544 6.15384C18.1544 2.76061 15.3937 0 12.0005 0C8.60727 0 5.84666 2.76061 5.84666 6.15384C5.84666 8.19581 6.84665 10.0084 8.38237 11.1284C4.56487 12.5892 1.84668 16.2905 1.84668 20.6154C1.84668 22.4817 3.36501 24 5.23129 24H18.7697C20.636 24 22.1543 22.4817 22.1543 20.6154C22.1543 16.2905 19.4361 12.5892 15.6186 11.1284ZM7.69284 6.15384C7.69284 3.77859 9.62526 1.84617 12.0005 1.84617C14.3758 1.84617 16.3082 3.77859 16.3082 6.15384C16.3082 8.52909 14.3758 10.4616 12.0005 10.4616C9.62526 10.4616 7.69284 8.52909 7.69284 6.15384ZM18.7697 22.1538H5.23129C4.38299 22.1538 3.69285 21.4637 3.69285 20.6153C3.69285 16.0344 7.4196 12.3076 12.0006 12.3076C16.5815 12.3076 20.3083 16.0344 20.3083 20.6153C20.3082 21.4637 19.6181 22.1538 18.7697 22.1538Z"
+                                fill="#273142" fill-opacity="0.9" />
+                        </svg>
+                        <a href="#">
+                            <span>Sign up</span>
+                        </a>
+                    </div>
+
+                    <div class="wishlist">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_1_1252)">
+                                <path
+                                    d="M22.0718 3.96971C19.4616 1.36022 15.2154 1.36022 12.6059 3.96971L11.9998 4.57546L11.394 3.96971C8.78456 1.35987 4.53796 1.35987 1.92847 3.96971C-0.628033 6.52621 -0.644634 10.5785 1.88997 13.3961C4.20171 15.9649 11.0196 21.5149 11.3089 21.7498C11.5053 21.9094 11.7416 21.9871 11.9765 21.9871C11.9843 21.9871 11.992 21.9871 11.9994 21.9868C12.2424 21.9981 12.4872 21.9147 12.69 21.7498C12.9792 21.5149 19.7979 15.9649 22.1103 13.3957C24.6446 10.5785 24.628 6.52621 22.0718 3.96971ZM20.535 11.9783C18.7326 13.9806 13.7782 18.1103 11.9994 19.5758C10.2207 18.1107 5.26733 13.9813 3.46527 11.9787C1.69712 10.0134 1.68052 7.21461 3.42677 5.46836C4.31862 4.57687 5.48985 4.13077 6.66108 4.13077C7.83231 4.13077 9.00355 4.57652 9.89539 5.46836L11.2277 6.80066C11.3863 6.95925 11.5862 7.0539 11.796 7.08711C12.1365 7.16022 12.5059 7.06521 12.7708 6.80101L14.1038 5.46836C15.8879 3.68502 18.7898 3.68538 20.5728 5.46836C22.3191 7.21461 22.3025 10.0134 20.535 11.9783Z"
+                                    fill="#273142" fill-opacity="0.9" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_1_1252">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <a href="#"> <span>Wishlist</span></a>
+                    </div>
+                    <div class="basket">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M19.6667 6.33337H5C3.89543 6.33337 3 7.2288 3 8.33337V20.3334C3 21.4379 3.89543 22.3334 5 22.3334H19.6667C20.7712 22.3334 21.6667 21.4379 21.6667 20.3334V8.33337C21.6667 7.2288 20.7712 6.33337 19.6667 6.33337Z"
+                                stroke="#3D4655" stroke-width="2" stroke-linecap="square" />
+                            <path
+                                d="M7 9V6.33333C7 4.91885 7.5619 3.56229 8.5621 2.5621C9.56229 1.5619 10.9188 1 12.3333 1C13.7478 1 15.1044 1.5619 16.1046 2.5621C17.1048 3.56229 17.6667 4.91885 17.6667 6.33333V9"
+                                stroke="#3D4655" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        <a href="#"> <span>Basket</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="header__section3 mt-4 mb-4">
+            <div class="container">
+                <ul class="links d-flex align-items-start justify-content-start column-gap-5">
+                    <li><a href="#">Evening bags</a></li>
+                    <li><a href="#">Shoulder bag</a></li>
+                    <li><a href="#">Backpack</a></li>
+                    <li><a href="#">Handbag</a></li>
+                    <li><a href="#">Postman bag</a></li>
+                    <li><a href="#">Belt bags</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+
+    <section class="shopping-bag">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xxl-8 col-xl-8 col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="shopping-bag-item">
+
+                            <div class="row border rounded my-3 p-3">
+                                <div class="col-4">
+                                   <img class="bg-light-subtle " src="../assets/images/kisspng-bag-laptop-backpack-knomo-beauchamp-5b0bf6a37cde46 7.png" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <div class="shopping-bag-general-info d-flex justify-content-between">
+                                                <h5>Hotel Magique Love and Magique Tote Bag</h5>
+                                                <h5>US $<span class="shopping-bag-general-info-price">20.00</span> </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4 d-flex justify-content-between">
+                                            <span>Size: XS</span>
+                                            <span>Color: Grey</span>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4">
+                                            <span>Delivery: 25-32 days</span>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4 d-flex justify-content-between">
+                                            <span class="py-2">Quality:</span>
+                                            <select class="form-control w-50">
+                                                <option value="">2-9</option>
+                                            </select>
+            
+                                        </div>
+                                    </div>
+            
+                                    <div class="row my-3 d-flex flex-row-reverse">
+                                        <div class="col-5">
+                                            <div class="d-flex column-gap-5">
+                                                <div class="shopping-bag-general-info-favorite">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <button class="shopping-bag-general-info-favorite-btn">Favorite</button>
+                                                </div>
+                                                <div class="shopping-bag-general-info-remove">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                    <button class="shopping-bag-general-info-remove-btn">Remove</button>
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+        
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="shopping-bag-item">
+
+                            <div class="row border rounded my-3 p-3">
+                                <div class="col-4">
+                                   <img class="bg-light-subtle " src="../assets/images/kisspng-handbag-satchel-leather-coach-inc-tapestry-5adb94da175541 2.png" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <div class="shopping-bag-general-info d-flex justify-content-between">
+                                                <h5>Hotel Magique Love and Magique Tote Bag</h5>
+                                                <h5>US $<span class="shopping-bag-general-info-price">20.00</span> </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4 d-flex justify-content-between">
+                                            <span>Size: XS</span>
+                                            <span>Color: Grey</span>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4">
+                                            <span>Delivery: 25-32 days</span>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4 d-flex justify-content-between">
+                                            <span class="py-2">Quality:</span>
+                                            <select class="form-control w-50">
+                                                <option value="">2-9</option>
+                                            </select>
+            
+                                        </div>
+                                    </div>
+            
+                                    <div class="row my-3 d-flex flex-row-reverse">
+                                        <div class="col-5">
+                                            <div class="d-flex column-gap-5">
+                                                <div class="shopping-bag-general-info-favorite">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <button class="shopping-bag-general-info-favorite-btn">Favorite</button>
+                                                </div>
+                                                <div class="shopping-bag-general-info-remove">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                    <button class="shopping-bag-general-info-remove-btn">Remove</button>
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+        
+                        </div>
+
+                    </div>
+
+                    <div class="col-12">
+
+                        <div class="shopping-bag-item">
+
+                            <div class="row border rounded my-3 p-3">
+                                <div class="col-4">
+                                   <img class="bg-light-subtle " src="../assets/images/kisspng-bag-laptop-backpack-knomo-beauchamp-5b0bf6a37cde46 7.png" alt="">
+                                </div>
+                                <div class="col-8">
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <div class="shopping-bag-general-info d-flex justify-content-between">
+                                                <h5>Hotel Magique Love and Magique Tote Bag</h5>
+                                                <h5>US $<span class="shopping-bag-general-info-price">20.00</span> </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4 d-flex justify-content-between">
+                                            <span>Size: XS</span>
+                                            <span>Color: Grey</span>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4">
+                                            <span>Delivery: 25-32 days</span>
+                                        </div>
+                                    </div>
+                                    <div class="row  my-3">
+                                        <div class="col-4 d-flex justify-content-between">
+                                            <span class="py-2">Quality:</span>
+                                            <select class="form-control w-50">
+                                                <option value="">2-9</option>
+                                            </select>
+            
+                                        </div>
+                                    </div>
+            
+                                    <div class="row my-3 d-flex flex-row-reverse">
+                                        <div class="col-5">
+                                            <div class="d-flex column-gap-5">
+                                                <div class="shopping-bag-general-info-favorite">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                    <button class="shopping-bag-general-info-favorite-btn">Favorite</button>
+                                                </div>
+                                                <div class="shopping-bag-general-info-remove">
+                                                    <i class="fa-solid fa-trash"></i>
+                                                    <button class="shopping-bag-general-info-remove-btn">Remove</button>
+                
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+            
+                                </div>
+                            </div>
+        
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                
+            </div>
+            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-12 mb-3">
+
+
+                <div class="shopping-bag-actions-box bg-light-subtle my-3  p-4">
+
+                    <div class="subtotal d-flex justify-content-between my-3">
+                        <span>Your subtotal</span>
+                        <span>US $ <span class="subtotal-price">20.00</span> </span>
+                    </div>
+                    <div class="shipping d-flex justify-content-between my-3">
+                        <span>Shipping changes</span>
+                        <span>Free</span>
+                    </div>
+                    <div class="total d-flex justify-content-between my-3">
+                        <span> <b>Total</b> </span>
+                        <span>US $ <span class="subtotal-price">20.00</span> </span>
+                    </div>
+
+                    <hr>
+
+                    <div class="discount-promo-code-box d-flex  position-relative">
+                        <input type="text" class="form-control">
+                        <button class="btn btn-danger position-absolute end-0">Apply</button>
+                    </div>
+                    
+
+                </div>
+
+                <div class="shopping-bag-actions-buttons-box d-flex  flex-column row-gap-2 ">
+                    <button class="btn btn-danger">Confirm cart</button>
+                    <button class="btn btn-light border-black ">Cash payment</button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="advantages bg-white ">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="advantage">
+                <div class="advantage-icon">
+                  <i class="fa-solid fa-truck"></i>
+                </div>
+                <div class="advantage-text">
+                  Guaranteed delivery
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="advantage">
+                <div class="advantage-icon">
+                  <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                </div>
+                <div class="advantage-text">
+                  Do not come back
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="advantage">
+                <div class="advantage-icon">
+                  <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="advantage-text">
+                  Safe and Secure shopping
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-12 col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="advantage">
+                <div class="advantage-icon">
+                  <i class="fa-regular fa-credit-card"></i>
+                </div>
+                <div class="advantage-text">
+                  Payment at the door or online
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </section>
+
+
+    <footer class="footer">
+        <section class="footer__section1">
+            <div class="container py-4 d-flex align-items-center justify-content-between">
+                <div class="footer__section1__left">
+                    <h1 class="fLogo">Snobella</h1>
+                </div>
+                <div class="footer__section1__right">
+                    <form action="#" class="footerForm d-flex align-items-center justify-content-center">
+                        <input type="text" id="searchInpt" class="form-control" placeholder="Search all product" />
+                        <i class="fa-solid fa-magnifying-glass searchFooter"></i>
+                    </form>
+                </div>
+            </div>
+            <div class="line">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="2" viewBox="0 0 1530 2" fill="none">
+                    <path d="M0 1L1530 1.00013" stroke="#273142" stroke-opacity="0.15" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="footer__section2">
+            <div class="container d-flex align-items-start justify-content-between">
+                <div class="footer__section2__left d-flex flex-column justify-content-start row-gap-4">
+                    <div class="footer__section2__left__head">
+                        <p>
+                            The wise man therefore always holds selectionThe wise man
+                            therefore always rejects pleasures to secure other greater
+                        </p>
+                    </div>
+                    <div class="footer__section2__left__body d-flex flex-column justify-content-start row-gap-4">
+                        <div class="mail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <path
+                                    d="M19.2196 2.94238H2.78037C1.2473 2.94238 0 4.18969 0 5.72275V16.2769C0 17.81 1.2473 19.0573 2.78037 19.0573H19.2196C20.7527 19.0573 22 17.81 22 16.2769V5.72275C22 4.18969 20.7527 2.94238 19.2196 2.94238ZM18.7853 4.73586L11 10.7499L3.21475 4.73586H18.7853ZM19.2196 17.2639H2.78037C2.23623 17.2639 1.79348 16.8212 1.79348 16.277V5.90425L10.4518 12.5927C10.6132 12.7174 10.8067 12.7797 11 12.7797C11.1933 12.7797 11.3868 12.7174 11.5482 12.5927L20.2065 5.90425V16.2769C20.2065 16.8212 19.7638 17.2639 19.2196 17.2639Z"
+                                    fill="#1D1D1B" />
+                            </svg>
+                            <span>Snobella@gmail.com</span>
+                        </div>
+                        <div class="phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                fill="none">
+                                <g clip-path="url(#clip0_1_1627)">
+                                    <path
+                                        d="M0.698238 3.12721C0.698238 2.52346 0.923572 1.93571 1.33282 1.48705C1.79029 0.9854 2.44225 0.697753 3.12102 0.697753L6.37376 0.697753C7.60819 0.697753 8.64297 1.61898 8.78056 2.84057C8.86163 3.5595 9.00967 4.27352 9.22053 4.96312C9.48451 5.82618 9.2554 6.75585 8.62245 7.38892L7.30456 8.70694C8.68552 11.2311 10.7903 13.3359 13.3139 14.7167L14.6319 13.3985C15.265 12.7656 16.1947 12.5365 17.0579 12.8006C17.7475 13.0115 18.4615 13.1595 19.1803 13.2406C20.402 13.378 21.3232 14.4128 21.3232 15.6472L21.3232 18.8998C21.3232 19.5787 21.0356 20.2307 20.5339 20.6882C20.0304 21.1477 19.3515 21.3751 18.6716 21.3126C16.3377 21.0978 14.0842 20.4792 11.9736 19.4739C9.92171 18.4966 8.06364 17.1834 6.45068 15.5704C4.83784 13.9576 3.52436 12.0994 2.54724 10.0475C1.54205 7.93677 0.923321 5.6833 0.708435 3.3494C0.701509 3.27525 0.698238 3.20123 0.698238 3.12721ZM7.71671 5.68028C7.71671 5.59871 7.7045 5.51575 7.6797 5.43456C7.43976 4.65029 7.27145 3.83833 7.1793 3.02096C7.13361 2.61523 6.7873 2.30908 6.37376 2.30908L3.12102 2.30908C2.89065 2.30908 2.67841 2.40287 2.52332 2.57306C2.36609 2.74515 2.29144 2.96847 2.31309 3.20161C3.11913 11.9598 10.0613 18.9019 18.8194 19.708C19.0525 19.7296 19.2758 19.6548 19.4481 19.4978C19.6181 19.3425 19.7119 19.1302 19.7119 18.8998L19.7119 15.6472C19.7119 15.2337 19.4059 14.8874 19 14.8416C18.1827 14.7495 17.3707 14.5812 16.5864 14.3414C16.2944 14.252 15.9821 14.3272 15.7713 14.5379L13.6254 16.6839L13.1066 16.4258C9.87249 14.8168 7.20498 12.1489 5.59554 8.91414L5.33723 8.39537L7.48319 6.24954C7.63513 6.09759 7.71671 5.89265 7.71671 5.68028Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1627">
+                                        <rect width="22" height="22" fill="white"
+                                            transform="translate(22) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>+748 383 23 14</span>
+                        </div>
+                    </div>
+                    <div class="footer__section2__left__foot">
+                        <button class="btn btn-light">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <g clip-path="url(#clip0_1_1623)">
+                                    <path
+                                        d="M19.8284 0.172502C19.6626 0.00672084 19.414 -0.0442556 19.1965 0.0427755L0.36834 7.57393C0.152911 7.6601 0.00865304 7.86526 0.00037181 8.09717C-0.00787036 8.32905 0.121504 8.54393 0.330254 8.64518L7.75477 12.246L11.3556 19.6705C11.4538 19.873 11.6589 20.0008 11.8827 20.0008C11.8896 20.0008 11.8966 20.0007 11.9036 20.0004C12.1355 19.9922 12.3407 19.8479 12.4268 19.6325L19.9581 0.804454C20.0451 0.586798 19.9941 0.338244 19.8284 0.172502ZM2.0349 8.16948L16.9812 2.19101L8.07383 11.0983L2.0349 8.16948ZM11.8313 17.9659L8.90246 11.9269L17.8099 3.01961L11.8313 17.9659Z"
+                                        fill="#212121" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_1_1623">
+                                        <rect width="20" height="20" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span>Send message</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="footer__section2__right column-gap-5 d-flex align-items-start justify-content-center">
+                    <div class="resp d-flex column-gap-5 align-items-start justify-content-center">
+                        <div class="left">
+                            <h5 class="footerLinks mb-4">Shop</h5>
+                            <ul class="footerList d-flex row-gap-2 align-items-start flex-column">
+                                <li><a href="#">Shoulder Bag</a></li>
+                                <li><a href="#">Backpack</a></li>
+                                <li><a href="#">Tote Bag</a></li>
+                                <li><a href="#">Hand Bag</a></li>
+                                <li><a href="#">Evening bags</a></li>
+                                <li><a href="#">Purse</a></li>
+                            </ul>
+                        </div>
+                        <div class="right">
+                            <h5 class="footerLinks mb-4">Company</h5>
+                            <ul class="footerList d-flex row-gap-2 align-items-start flex-column">
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Customer service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="resp2">
+                        <h5 class="footerLinks mb-4">Help</h5>
+                        <ul class="footerList d-flex row-gap-2 align-items-start flex-column">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#" class="py-3">Cancellation of the order</a></li>
+                            <li><a href="#">Don't go back</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer__section3">
+            <div class="container d-flex align-items-center justify-content-between">
+                <div class="footer__section3__left">
+                    <span class="res">© 2020. All rights reserved.</span>
+                </div>
+                <div class="footer__section3__right d-flex justify-content-center align-items-center column-gap-3">
+                    <i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook-f"></i><i
+                        class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
