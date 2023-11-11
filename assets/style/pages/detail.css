@@ -1,0 +1,256 @@
+
+.main__section1 .firstItem a {
+  color: #1d1d1d !important;
+}
+.main__section1 .secondItem {
+  color: rgba(29, 29, 29, 0.75);
+}
+
+.col-md-8 {
+  padding-left: 80px;
+}
+.imageBox {
+  position: relative;
+  width: 456px;
+  height: 473px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.imageBox img {
+  width: 340px;
+  height: 379px;
+}
+
+.redBox {
+  position: absolute;
+  width: 79px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #df4244;
+
+  top: 30px;
+  left: 24px;
+}
+.card-title {
+  color: #212121;
+}
+.detailHeard {
+  position: absolute;
+  top: 30px;
+  right: 24px;
+  font-size: 28px;
+}
+.stars {
+  color: yellow;
+}
+.point {
+  color: #212121;
+}
+.selectPieces {
+  margin-top: 24px;
+}
+.checkBox {
+  width: 224px;
+  height: 60px;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.pieces,
+.money {
+  color: rgba(33, 33, 33, 0.9);
+}
+.checkBox.selected {
+  border: 2px solid #f75145;
+}
+.money.color {
+  color: #f75145;
+}
+.colorAndSize {
+  margin-top: 22px;
+  column-gap: 100px;
+}
+
+.size-title,
+.color-title {
+  color: #212121;
+}
+.sizeCheckBoxes {
+  margin-top: 16px;
+}
+.sizeCheck {
+  width: 64px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #212121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sizeCheck.active {
+  color: #f75145;
+  border: 2px solid #f75145;
+}
+.colorCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+}
+
+.colorCheck.select {
+  border: 1px solid rgba(39, 49, 66, 0.75);
+}
+
+.orange {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #cd5c0b;
+}
+
+.blue {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0085ff;
+}
+.green {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #35783b;
+}
+.pink {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ed0875;
+}
+
+.cardsBtns {
+  margin-top: 40px;
+}
+.addToCard {
+  width: 244px;
+  height: 52px;
+  border-radius: 8px;
+  background: #df4244;
+  color: #fff;
+  border: none;
+}
+
+.cashPayment {
+  color: #212121;
+  width: 244px;
+  height: 52px;
+}
+.cardLinkWp {
+  color: #000;
+
+  text-decoration-line: underline !important;
+}
+.desLine {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.desLine svg{
+  width: 100%;
+}
+.containerHead {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 103px;
+}
+.description,
+.reviews {
+  color: rgba(33, 33, 33, 0.55);
+  cursor: pointer;
+}
+
+.descriptions {
+display: none;
+  width: 90%;
+  margin: 40px auto 0;
+  color: rgba(33, 33, 33, 0.75);
+}
+
+
+.reviewsCon {
+display: none;
+  width: 90%;
+  margin: 40px auto 0;
+  color: rgba(33, 33, 33, 0.75);
+}
+.descriptions p {
+  width: 88%;
+}
+.card-body .cardHead h3{
+  color: #212121;
+
+}
+
+.cardHistory p ,.cardRev p{
+  color: rgba(33, 33, 33, 0.75);
+margin-top: 8px;
+}
+
+.cardRev p{
+  width: 80%;
+}
+.cardHeadStars{
+  color: yellow;
+}
+
+
+.description.activateDes,
+.reviews.activateDes {
+  color: #212121;
+}
+.firstOrangeLine{
+  top:13px;
+display: none;
+}
+.secondOrangeLine{
+  top: 13px;
+  left: 245px;
+  display: none;
+}
+.orangLine{
+  position: absolute;
+  width: 96px;
+height: 3px;
+border-radius: 5px;
+  background-color: #DF4244;
+}
+
+.firstOrangeLine.activeLine ,.secondOrangeLine.activeLine{
+display: flex;
+}
+.descriptions.activedes{
+ display: block;
+}
+.reviewsCon.activRev{
+  display: block;
+}
+
+
+@media screen and (max-width: 1200px) {
+.cardRow{
+  flex-direction: column;
+  align-items: center ;
+  justify-content: center;
+}
+
+.desAndRevContainer{
+  margin-top: 600px;
+
+}
+}
