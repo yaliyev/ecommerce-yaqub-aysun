@@ -100,6 +100,128 @@ form {
   height: 40px;
   border: 1px solid #c8c8c8 !important;
 }
+.stars {
+  color: yellow;
+}
+
+.colorCheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+}
+
+.colorCheck.select {
+  border: 1px solid rgba(39, 49, 66, 0.75);
+}
+
+.darkGreen {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #275240;
+}
+.blue {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0085ff;
+}
+
+.darkBro {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3d2a33;
+}
+
+.orange {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #cd5c0b;
+}
+
+.brown {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #773838;
+}
+
+.dark {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #000;
+}
+
+.green {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #307e46;
+}
+
+.lightBlue {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0085ff;
+}
+
+.orange {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ff6b00;
+}
+
+.yellow {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  background: #d6b73b;
+}
+
+.purple {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  background: #7c4dff;
+}
+
+.darkOrange {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  background: #f75145;
+}
+
+.darkPurple {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  background: #842759;
+}
+.lightBrown {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+
+  background: #895c31;
+}
+
+.colorCheckBoxes {
+  row-gap: 10px;
+  width: 65%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
 
 @media screen and (max-width: 1200px) {
   .containerTop .main__section2__left {
@@ -128,20 +250,18 @@ form {
 }
 
 @media screen and (max-width: 600px) {
-  .accordion-side *{
+  .accordion-side * {
     font-size: 13px !important;
   }
 }
 
 @media screen and (max-width: 510px) {
-  .accordion-side *{
+  .accordion-side * {
     font-size: 10px !important;
   }
 }
 @media screen and (max-width: 390px) {
-  .accordion-side *{
+  .accordion-side * {
     font-size: 7px !important;
   }
 }
-
-

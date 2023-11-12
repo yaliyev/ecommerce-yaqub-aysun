@@ -1,0 +1,52 @@
+.main__section1 .firstItem a {
+  color: #1d1d1d !important;
+}
+.main__section1 .secondItem {
+  color: rgba(29, 29, 29, 0.75);
+}
+.orders {
+  color: #212121;
+}
+
+.list-group {
+  width: 264px;
+  height: 344px;
+}
+.about__left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 17px 14px 17px 0;
+}
+.about__right__name {
+  color: #212121;
+}
+
+.about__right__code {
+  color: rgba(33, 33, 33, 0.75);
+}
+
+.listGroup {
+  position: relative;
+
+  color: #212121;
+  cursor: pointer;
+}
+
+.aboutLine {
+  display: none;
+  position: absolute;
+  left: -1px;
+  border-radius: 5px;
+  width: 2px;
+  height: 100%;
+  background: #007878;
+}
+
+.listGroup.activeList {
+  background: #edf7f7;
+}
+.aboutLine.activeAboutLine{
+    display: flex;
+}
