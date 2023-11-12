@@ -13,6 +13,29 @@ if(cartString != null){
 
 let cartCards = document.getElementById('cart-cards');
 
+function calculateTotalPrice(){
+    let sum = 0;
+
+    let subTotalPrice = document.getElementById('subtotal-price');
+    let totalPrice = document.getElementById('total-price');
+
+    subTotalPrice.innerText = '';
+    totalPrice.innerText = '';
+
+    for(let i=0;i<cart.length;i++){
+        let productId = cart[i].id;
+
+        let product = products.find(product=>product.id===productId);
+
+        if(product != undefined){
+            sum += Number(product.price);
+        }
+    }
+
+    subTotalPrice.innerText = sum;
+    totalPrice.innerText = sum;
+}
+
 
 function insertCartItems() {
 
@@ -240,6 +263,7 @@ function insertCartItems() {
 
         }
     }
+    calculateTotalPrice();
 }
 (async()=>{
    products = await get();
