@@ -13,15 +13,6 @@ let productsCards = document.getElementById('products-cards');
 
 let products = [];
 
-let searchInputButton = document.getElementById('searchInptBtn');
-
-searchInputButton.addEventListener('click',function(){
-    let searchInput = document.getElementById('searchInpt');
-    setTimeout(()=>{
-        window.location.href = `search-result.html?search=${searchInput.value}`;
-    },200)
-   
-})
 
 
 async function getSearchParameters(){

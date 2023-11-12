@@ -14,15 +14,7 @@ let featuredProductsCards = document.getElementById('featured-products-cards');
 let bestsellerProductsCards = document.getElementById('bestseller-products-cards');
 let discountProductsCards = document.getElementById('discount-products-cards');
 
-let searchInputButton = document.getElementById('searchInptBtn');
 
-searchInputButton.addEventListener('click',function(){
-    let searchInput = document.getElementById('searchInpt');
-    setTimeout(()=>{
-        window.location.href = `search-result.html?search=${searchInput.value}`;
-    },200)
-   
-})
 
 async function insertFeaturedProducts(reloadData = false) {
 
