@@ -64,7 +64,7 @@
                 <div class="header__section2__middle">
                     <form action="#" class="formSearch d-flex align-items-center justify-content-center">
                         <input type="text" id="searchInpt" class="form-control" placeholder="Search all product" />
-                        <i class="fa-solid fa-magnifying-glass searchGlasses"></i>
+                        <i id="searchInptBtn" class="fa-solid fa-magnifying-glass searchGlasses"></i>
                     </form>
                 </div>
                 <div class="header__section2__right d-flex align-items-center justify-content-center column-gap-4">
@@ -311,8 +311,8 @@
 
                 </div>
                 <div class="col-8">
-                    <div class="row">
-                        <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 mt-3">
+                    <div id="products-cards" class="row">
+                        <!-- <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12 mt-3">
                             <div class="product">
                                 <div class="card">
 
@@ -467,7 +467,7 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                 </div>
@@ -608,10 +608,16 @@
 
 
 
-    <!-- Bootstrap JS CDN -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.1/axios.min.js"
+        integrity="sha512-m9S8W3a9hhBHPFAbEIaG7J9P92dzcAWwM42VvJp5n1/M599ldK6Z2st2SfJGsX0QR4LfCVr681vyU5vW8d218w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="../assets/scripts/product-request.js"></script>
+    <script type="module" src="../assets/scripts/search-result.js"></script>
 </body>
 
 </html>
