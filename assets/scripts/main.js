@@ -1,6 +1,14 @@
 import { get } from './product-request.js';
 
+let cartString = localStorage.getItem('ecommerce-cart');
+
 let products = [];
+
+let cart = [];
+
+if(cartString != null){
+    cart = JSON.parse(cartString);
+}
 
 let featuredProductsCards = document.getElementById('featured-products-cards');
 let bestsellerProductsCards = document.getElementById('bestseller-products-cards');
@@ -46,7 +54,13 @@ async function insertFeaturedProducts(reloadData = false) {
         productDiv.setAttribute('class', 'product');
         cardDiv.setAttribute('class', 'card');
         productCurrentStatus.setAttribute('class', 'product-current-status d-flex justify-content-between');
-        productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
+
+        if(product.isNew == true){
+            productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
+        }
+        if(product.isDiscounted == true){
+            productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
+        }
         favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
         productImageElement.setAttribute('class', 'card-img-top w-100 product-image');
         cardBodyDiv.setAttribute('class', 'card-body');
@@ -58,17 +72,29 @@ async function insertFeaturedProducts(reloadData = false) {
 
         // Text Contents
 
+        if(product.isNew)
         productCurrentStatusButton.innerText = 'New';
-
+        if(product.isDiscounted)
+        productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
         productImageElement.src = product.productImage;
 
-        starsDiv.innerHTML = `
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     `;
+        for(let j = 0; j < product.stars;j++){
+            starsDiv.innerHTML +=`
+            <i class="fa-solid fa-star"></i>
+            `
+        }
+        for(let j = 0; j < 5 - product.stars;j++){
+            starsDiv.innerHTML +=`
+            <i class="fa-regular fa-star"></i>
+            `
+        }
+    //     starsDiv.innerHTML = `
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  `;
 
         cardTitleElement.innerText = product.name;
 
@@ -79,8 +105,39 @@ async function insertFeaturedProducts(reloadData = false) {
 
         addToCartButton.innerText = 'Add to cart';
 
+        if(!product.isNew&&!product.isDiscounted) // eger product yeni deyilse ve endirimde deyilse button gizlet
+        productCurrentStatusButton.style.visibility = 'hidden';
+
+
+        // eventListeners
+
+        addToCartButton.addEventListener('click',function(){
+
+            let result = cart.find((element)=>element.id === product.id);
+
+            if(result == undefined){
+                cart.push({id: product.id });
+                localStorage.setItem('ecommerce-cart',JSON.stringify(cart));
+                Swal.fire({
+                    title: "Success",
+                    text: "Product added to cart",
+                    icon: "success"
+                  });
+            }else{
+                Swal.fire({
+                    title: "Exist",
+                    text: "Product exist in cart",
+                    icon: "error"
+                  });
+            }
+
+            
+        });
+
+
         // appends
 
+        
         productCurrentStatus.appendChild(productCurrentStatusButton);
         productCurrentStatus.appendChild(favouriteIcon);
 
@@ -139,7 +196,12 @@ async function insertBestsellerProducts(reloadData = false) {
         productDiv.setAttribute('class', 'product');
         cardDiv.setAttribute('class', 'card');
         productCurrentStatus.setAttribute('class', 'product-current-status d-flex justify-content-between');
-        productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
+        if(product.isNew == true){
+            productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
+        }
+        if(product.isDiscounted == true){
+            productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
+        }
         favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
         productImageElement.setAttribute('class', 'card-img-top w-100 product-image');
         cardBodyDiv.setAttribute('class', 'card-body');
@@ -151,17 +213,31 @@ async function insertBestsellerProducts(reloadData = false) {
 
         // Text Contents
 
+        if(product.isNew)
         productCurrentStatusButton.innerText = 'New';
+        if(product.isDiscounted)
+        productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
+        productImageElement.src = product.productImage;
 
         productImageElement.src = product.productImage;
 
-        starsDiv.innerHTML = `
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     `;
+        for(let j = 0; j < product.stars;j++){
+            starsDiv.innerHTML +=`
+            <i class="fa-solid fa-star"></i>
+            `
+        }
+        for(let j = 0; j < 5 - product.stars;j++){
+            starsDiv.innerHTML +=`
+            <i class="fa-regular fa-star"></i>
+            `
+        }
+    //     starsDiv.innerHTML = `
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  `;
 
         cardTitleElement.innerText = product.name;
 
@@ -171,6 +247,31 @@ async function insertBestsellerProducts(reloadData = false) {
      `;
 
         addToCartButton.innerText = 'Add to cart';
+
+        // eventListeners
+
+        addToCartButton.addEventListener('click',function(){
+
+            let result = cart.find((element)=>element.id === product.id);
+
+            if(result == undefined){
+                cart.push({id: product.id });
+                localStorage.setItem('ecommerce-cart',JSON.stringify(cart));
+                Swal.fire({
+                    title: "Success",
+                    text: "Product added to cart",
+                    icon: "success"
+                  });
+            }else{
+                Swal.fire({
+                    title: "Exist",
+                    text: "Product exist in cart",
+                    icon: "error"
+                  });
+            }
+
+            
+        });
 
         // appends
 
@@ -233,7 +334,12 @@ async function insertDiscountProducts(reloadData = false) {
         productDiv.setAttribute('class', 'product');
         cardDiv.setAttribute('class', 'card');
         productCurrentStatus.setAttribute('class', 'product-current-status d-flex justify-content-between');
-        productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
+        if(product.isNew == true){
+            productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
+        }
+        if(product.isDiscounted == true){
+            productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
+        }
         favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
         productImageElement.setAttribute('class', 'card-img-top w-100 product-image');
         cardBodyDiv.setAttribute('class', 'card-body');
@@ -245,17 +351,31 @@ async function insertDiscountProducts(reloadData = false) {
 
         // Text Contents
 
+        if(product.isNew)
         productCurrentStatusButton.innerText = 'New';
+        if(product.isDiscounted)
+        productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
+        productImageElement.src = product.productImage;
 
         productImageElement.src = product.productImage;
 
-        starsDiv.innerHTML = `
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     <i class="fa-regular fa-star"></i>
-     `;
+        for(let j = 0; j < product.stars;j++){
+            starsDiv.innerHTML +=`
+            <i class="fa-solid fa-star"></i>
+            `
+        }
+        for(let j = 0; j < 5 - product.stars;j++){
+            starsDiv.innerHTML +=`
+            <i class="fa-regular fa-star"></i>
+            `
+        }
+    //     starsDiv.innerHTML = `
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  <i class="fa-regular fa-star"></i>
+    //  `;
 
         cardTitleElement.innerText = product.name;
 
@@ -265,6 +385,31 @@ async function insertDiscountProducts(reloadData = false) {
      `;
 
         addToCartButton.innerText = 'Add to cart';
+
+        // eventListeners
+
+        addToCartButton.addEventListener('click',function(){
+
+            let result = cart.find((element)=>element.id === product.id);
+
+            if(result == undefined){
+                cart.push({id: product.id });
+                localStorage.setItem('ecommerce-cart',JSON.stringify(cart));
+                Swal.fire({
+                    title: "Success",
+                    text: "Product added to cart",
+                    icon: "success"
+                  });
+            }else{
+                Swal.fire({
+                    title: "Exist",
+                    text: "Product exist in cart",
+                    icon: "error"
+                  });
+            }
+
+            
+        });
 
         // appends
 
