@@ -1,13 +1,21 @@
 import { get } from './product-request.js';
 
+let favouritesString = localStorage.getItem('ecommerce-favourites');
+
 let cartString = localStorage.getItem('ecommerce-cart');
+
+let favourites = [];
 
 let products = [];
 
 let cart = [];
 
-if(cartString != null){
+if (cartString != null) {
     cart = JSON.parse(cartString);
+}
+
+if (favouritesString != null) {
+    favourites = JSON.parse(favouritesString);
 }
 
 let featuredProductsCards = document.getElementById('featured-products-cards');
@@ -28,7 +36,7 @@ async function insertFeaturedProducts(reloadData = false) {
 
         let product = products[i];
 
-        if(!product.isFeatured){
+        if (!product.isFeatured) {
             continue;
         }
 
@@ -57,13 +65,22 @@ async function insertFeaturedProducts(reloadData = false) {
         cardDiv.setAttribute('class', 'card');
         productCurrentStatus.setAttribute('class', 'product-current-status d-flex justify-content-between');
 
-        if(product.isNew == true){
+        if (product.isNew == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
         }
-        if(product.isDiscounted == true){
+        if (product.isDiscounted == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
         }
-        favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+
+
+
+        if (favourites.find((element) => element.id === product.id) != undefined) {
+            favouriteIcon.setAttribute('class', 'fa-solid fa-heart fa-3x m-2');
+        } else {
+            favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+        }
+
+
         productImageElement.setAttribute('class', 'card-img-top w-100 product-image');
         cardBodyDiv.setAttribute('class', 'card-body');
         starsDiv.setAttribute('class', 'stars');
@@ -74,29 +91,29 @@ async function insertFeaturedProducts(reloadData = false) {
 
         // Text Contents
 
-        if(product.isNew)
-        productCurrentStatusButton.innerText = 'New';
-        if(product.isDiscounted)
-        productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
+        if (product.isNew)
+            productCurrentStatusButton.innerText = 'New';
+        if (product.isDiscounted)
+            productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
         productImageElement.src = product.productImage;
 
-        for(let j = 0; j < product.stars;j++){
-            starsDiv.innerHTML +=`
+        for (let j = 0; j < product.stars; j++) {
+            starsDiv.innerHTML += `
             <i class="fa-solid fa-star"></i>
             `
         }
-        for(let j = 0; j < 5 - product.stars;j++){
-            starsDiv.innerHTML +=`
+        for (let j = 0; j < 5 - product.stars; j++) {
+            starsDiv.innerHTML += `
             <i class="fa-regular fa-star"></i>
             `
         }
-    //     starsDiv.innerHTML = `
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  `;
+        //     starsDiv.innerHTML = `
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  `;
 
         cardTitleElement.innerText = product.name;
 
@@ -107,39 +124,70 @@ async function insertFeaturedProducts(reloadData = false) {
 
         addToCartButton.innerText = 'Add to cart';
 
-        if(!product.isNew&&!product.isDiscounted) // eger product yeni deyilse ve endirimde deyilse button gizlet
-        productCurrentStatusButton.style.visibility = 'hidden';
+        if (!product.isNew && !product.isDiscounted) // eger product yeni deyilse ve endirimde deyilse button gizlet
+            productCurrentStatusButton.style.visibility = 'hidden';
 
 
         // eventListeners
 
-        addToCartButton.addEventListener('click',function(){
+        favouriteIcon.addEventListener('click', function () {
+            let favouritesProductIndex = null;
+            let productInFavourites = favourites.find((element,index) =>{
+                favouritesProductIndex = index;
+                return element.id === product.id;
+            } );
 
-            let result = cart.find((element)=>element.id === product.id);
+            if (productInFavourites == undefined) {
+                favourites.push({ id: product.id });
+                localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                this.setAttribute('class', 'fa-solid fa-heart fa-3x m-2');
+                Swal.fire({
+                    icon: "success",
+                    title: "Magnificent",
+                    text: `Wooow you liked ${product.name}`,
+                    timer: 1000
+                  });
+            }else{
+                 favourites.splice(favouritesProductIndex,1);
+                 localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                this.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+                Swal.fire({
+                    icon: "success",
+                    title: "Oops...",
+                    text: `Product has been deleted from favourites`,
+                    timer: 1000
+                  });
+            }
 
-            if(result == undefined){
-                cart.push({id: product.id });
-                localStorage.setItem('ecommerce-cart',JSON.stringify(cart));
+        });
+
+        addToCartButton.addEventListener('click', function () {
+
+            let result = cart.find((element) => element.id === product.id);
+
+            if (result == undefined) {
+                cart.push({ id: product.id });
+                localStorage.setItem('ecommerce-cart', JSON.stringify(cart));
                 Swal.fire({
                     title: "Success",
                     text: "Product added to cart",
                     icon: "success"
-                  });
-            }else{
+                });
+            } else {
                 Swal.fire({
                     title: "Exist",
                     text: "Product exist in cart",
                     icon: "error"
-                  });
+                });
             }
 
-            
+
         });
 
 
         // appends
 
-        
+
         productCurrentStatus.appendChild(productCurrentStatusButton);
         productCurrentStatus.appendChild(favouriteIcon);
 
@@ -170,7 +218,7 @@ async function insertBestsellerProducts(reloadData = false) {
 
         let product = products[i];
 
-        if(!product.isBestSeller){
+        if (!product.isBestSeller) {
             continue;
         }
 
@@ -198,10 +246,10 @@ async function insertBestsellerProducts(reloadData = false) {
         productDiv.setAttribute('class', 'product');
         cardDiv.setAttribute('class', 'card');
         productCurrentStatus.setAttribute('class', 'product-current-status d-flex justify-content-between');
-        if(product.isNew == true){
+        if (product.isNew == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
         }
-        if(product.isDiscounted == true){
+        if (product.isDiscounted == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
         }
         favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
@@ -215,31 +263,31 @@ async function insertBestsellerProducts(reloadData = false) {
 
         // Text Contents
 
-        if(product.isNew)
-        productCurrentStatusButton.innerText = 'New';
-        if(product.isDiscounted)
-        productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
+        if (product.isNew)
+            productCurrentStatusButton.innerText = 'New';
+        if (product.isDiscounted)
+            productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
         productImageElement.src = product.productImage;
 
         productImageElement.src = product.productImage;
 
-        for(let j = 0; j < product.stars;j++){
-            starsDiv.innerHTML +=`
+        for (let j = 0; j < product.stars; j++) {
+            starsDiv.innerHTML += `
             <i class="fa-solid fa-star"></i>
             `
         }
-        for(let j = 0; j < 5 - product.stars;j++){
-            starsDiv.innerHTML +=`
+        for (let j = 0; j < 5 - product.stars; j++) {
+            starsDiv.innerHTML += `
             <i class="fa-regular fa-star"></i>
             `
         }
-    //     starsDiv.innerHTML = `
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  `;
+        //     starsDiv.innerHTML = `
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  `;
 
         cardTitleElement.innerText = product.name;
 
@@ -252,27 +300,27 @@ async function insertBestsellerProducts(reloadData = false) {
 
         // eventListeners
 
-        addToCartButton.addEventListener('click',function(){
+        addToCartButton.addEventListener('click', function () {
 
-            let result = cart.find((element)=>element.id === product.id);
+            let result = cart.find((element) => element.id === product.id);
 
-            if(result == undefined){
-                cart.push({id: product.id });
-                localStorage.setItem('ecommerce-cart',JSON.stringify(cart));
+            if (result == undefined) {
+                cart.push({ id: product.id });
+                localStorage.setItem('ecommerce-cart', JSON.stringify(cart));
                 Swal.fire({
                     title: "Success",
                     text: "Product added to cart",
                     icon: "success"
-                  });
-            }else{
+                });
+            } else {
                 Swal.fire({
                     title: "Exist",
                     text: "Product exist in cart",
                     icon: "error"
-                  });
+                });
             }
 
-            
+
         });
 
         // appends
@@ -308,7 +356,7 @@ async function insertDiscountProducts(reloadData = false) {
 
         let product = products[i];
 
-        if(!product.isDiscounted){
+        if (!product.isDiscounted) {
             continue;
         }
 
@@ -336,10 +384,10 @@ async function insertDiscountProducts(reloadData = false) {
         productDiv.setAttribute('class', 'product');
         cardDiv.setAttribute('class', 'card');
         productCurrentStatus.setAttribute('class', 'product-current-status d-flex justify-content-between');
-        if(product.isNew == true){
+        if (product.isNew == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-success m-2 py-2 px-4');
         }
-        if(product.isDiscounted == true){
+        if (product.isDiscounted == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
         }
         favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
@@ -353,31 +401,31 @@ async function insertDiscountProducts(reloadData = false) {
 
         // Text Contents
 
-        if(product.isNew)
-        productCurrentStatusButton.innerText = 'New';
-        if(product.isDiscounted)
-        productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
+        if (product.isNew)
+            productCurrentStatusButton.innerText = 'New';
+        if (product.isDiscounted)
+            productCurrentStatusButton.innerText = `-${product.discountPercent}%`;
         productImageElement.src = product.productImage;
 
         productImageElement.src = product.productImage;
 
-        for(let j = 0; j < product.stars;j++){
-            starsDiv.innerHTML +=`
+        for (let j = 0; j < product.stars; j++) {
+            starsDiv.innerHTML += `
             <i class="fa-solid fa-star"></i>
             `
         }
-        for(let j = 0; j < 5 - product.stars;j++){
-            starsDiv.innerHTML +=`
+        for (let j = 0; j < 5 - product.stars; j++) {
+            starsDiv.innerHTML += `
             <i class="fa-regular fa-star"></i>
             `
         }
-    //     starsDiv.innerHTML = `
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  <i class="fa-regular fa-star"></i>
-    //  `;
+        //     starsDiv.innerHTML = `
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  <i class="fa-regular fa-star"></i>
+        //  `;
 
         cardTitleElement.innerText = product.name;
 
@@ -390,27 +438,27 @@ async function insertDiscountProducts(reloadData = false) {
 
         // eventListeners
 
-        addToCartButton.addEventListener('click',function(){
+        addToCartButton.addEventListener('click', function () {
 
-            let result = cart.find((element)=>element.id === product.id);
+            let result = cart.find((element) => element.id === product.id);
 
-            if(result == undefined){
-                cart.push({id: product.id });
-                localStorage.setItem('ecommerce-cart',JSON.stringify(cart));
+            if (result == undefined) {
+                cart.push({ id: product.id });
+                localStorage.setItem('ecommerce-cart', JSON.stringify(cart));
                 Swal.fire({
                     title: "Success",
                     text: "Product added to cart",
                     icon: "success"
-                  });
-            }else{
+                });
+            } else {
                 Swal.fire({
                     title: "Exist",
                     text: "Product exist in cart",
                     icon: "error"
-                  });
+                });
             }
 
-            
+
         });
 
         // appends
@@ -434,7 +482,7 @@ async function insertDiscountProducts(reloadData = false) {
     }
 }
 
-(async ()=>{
+(async () => {
     await insertFeaturedProducts(true); // data cekdiyimize gore gozdeyirik(Yalniz burada,ona gore digerlerinde falsedu)
     insertBestsellerProducts(false);
     insertDiscountProducts(false);

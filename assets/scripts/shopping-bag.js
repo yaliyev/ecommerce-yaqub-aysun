@@ -1,10 +1,20 @@
 import { get } from './product-request.js';
 
+let favouritesString = localStorage.getItem('ecommerce-favourites');
+
 let cartString = localStorage.getItem('ecommerce-cart');
+
+let favourites = [];
+
 
 let cart = [];
 
 let products = [];
+
+
+if (favouritesString != null) {
+    favourites = JSON.parse(favouritesString);
+}
 
 if(cartString != null){
     cart = JSON.parse(cartString);
@@ -100,11 +110,11 @@ function insertCartItems() {
         
             let flexContainer = document.createElement('div');
         
-            let favoriteDiv = document.createElement('div');
+            let favouriteDiv = document.createElement('div');
         
-            let favoriteIcon = document.createElement('i');
+            let favouriteIcon = document.createElement('i');
         
-            let favoriteButton = document.createElement('button');
+            let favouriteButton = document.createElement('button');
         
             let removeDiv = document.createElement('div');
         
@@ -153,11 +163,15 @@ function insertCartItems() {
         
             flexContainer.setAttribute('class', 'd-flex column-gap-5');
         
-            favoriteDiv.setAttribute('class', 'shopping-bag-general-info-favorite');
+            favouriteDiv.setAttribute('class', 'shopping-bag-general-info-favourite');
         
-            favoriteIcon.setAttribute('class', 'fa-regular fa-heart');
+            if (favourites.find((element) => element.id === product.id) != undefined) {
+                favouriteIcon.setAttribute('class', 'fa-solid fa-heart');
+            } else {
+                favouriteIcon.setAttribute('class', 'fa-regular fa-heart');
+            }
         
-            favoriteButton.setAttribute('class', 'shopping-bag-general-info-favorite-btn');
+            favouriteButton.setAttribute('class', 'shopping-bag-general-info-favourite-btn');
         
             removeDiv.setAttribute('class', 'shopping-bag-general-info-remove');
         
@@ -182,9 +196,42 @@ function insertCartItems() {
         
             optionElement.innerText = '2-9';
         
-            favoriteButton.innerText = 'Favorite';
+            favouriteButton.innerText = 'favourite';
         
             removeButton.innerText = 'Remove';
+
+
+            favouriteDiv.addEventListener('click', function () {
+                console.log(1);
+                let favouritesProductIndex = null;
+                let productInFavourites = favourites.find((element,index) =>{
+                    favouritesProductIndex = index;
+                    return element.id === product.id;
+                } );
+    
+                if (productInFavourites == undefined) {
+                    favourites.push({ id: product.id });
+                    localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                    favouriteDiv.querySelector('i').setAttribute('class', 'fa-solid fa-heart');
+                    Swal.fire({
+                        icon: "success",
+                        title: "Magnificent",
+                        text: `Wooow you liked ${product.name}`,
+                        timer: 1000
+                      });
+                }else{
+                     favourites.splice(favouritesProductIndex,1);
+                     localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                     favouriteDiv.querySelector('i').setAttribute('class', 'fa-regular fa-heart');
+                    Swal.fire({
+                        icon: "success",
+                        title: "Oops...",
+                        text: `Product has been deleted from favourites`,
+                        timer: 1000
+                      });
+                }
+    
+            });
 
             removeButton.addEventListener('click',function(){
                 cart.splice(i,1);
@@ -226,15 +273,15 @@ function insertCartItems() {
         
             rowFiveDiv.appendChild(colFourQualityDiv);
         
-            favoriteDiv.appendChild(favoriteIcon);
+            favouriteDiv.appendChild(favouriteIcon);
         
-            favoriteDiv.appendChild(favoriteButton);
+            favouriteDiv.appendChild(favouriteButton);
         
             removeDiv.appendChild(removeIcon);
         
             removeDiv.appendChild(removeButton);
         
-            flexContainer.appendChild(favoriteDiv);
+            flexContainer.appendChild(favouriteDiv);
         
             flexContainer.appendChild(removeDiv);
         
