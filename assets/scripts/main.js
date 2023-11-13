@@ -252,7 +252,11 @@ async function insertBestsellerProducts(reloadData = false) {
         if (product.isDiscounted == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
         }
-        favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+        if (favourites.find((element) => element.id === product.id) != undefined) {
+            favouriteIcon.setAttribute('class', 'fa-solid fa-heart fa-3x m-2');
+        } else {
+            favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+        }
         productImageElement.setAttribute('class', 'card-img-top w-100 product-image');
         cardBodyDiv.setAttribute('class', 'card-body');
         starsDiv.setAttribute('class', 'stars');
@@ -299,6 +303,38 @@ async function insertBestsellerProducts(reloadData = false) {
         addToCartButton.innerText = 'Add to cart';
 
         // eventListeners
+
+        favouriteIcon.addEventListener('click', function () {
+            let favouritesProductIndex = null;
+            let productInFavourites = favourites.find((element,index) =>{
+                favouritesProductIndex = index;
+                return element.id === product.id;
+            } );
+
+            if (productInFavourites == undefined) {
+                favourites.push({ id: product.id });
+                localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                this.setAttribute('class', 'fa-solid fa-heart fa-3x m-2');
+                Swal.fire({
+                    icon: "success",
+                    title: "Magnificent",
+                    text: `Wooow you liked ${product.name}`,
+                    timer: 1000
+                  });
+            }else{
+                 favourites.splice(favouritesProductIndex,1);
+                 localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                this.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+                Swal.fire({
+                    icon: "success",
+                    title: "Oops...",
+                    text: `Product has been deleted from favourites`,
+                    timer: 1000
+                  });
+            }
+
+        });
+
 
         addToCartButton.addEventListener('click', function () {
 
@@ -390,7 +426,11 @@ async function insertDiscountProducts(reloadData = false) {
         if (product.isDiscounted == true) {
             productCurrentStatusButton.setAttribute('class', 'product-current-status-button btn btn-danger m-2 py-2 px-4');
         }
-        favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+        if (favourites.find((element) => element.id === product.id) != undefined) {
+            favouriteIcon.setAttribute('class', 'fa-solid fa-heart fa-3x m-2');
+        } else {
+            favouriteIcon.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+        }
         productImageElement.setAttribute('class', 'card-img-top w-100 product-image');
         cardBodyDiv.setAttribute('class', 'card-body');
         starsDiv.setAttribute('class', 'stars');
@@ -437,6 +477,38 @@ async function insertDiscountProducts(reloadData = false) {
         addToCartButton.innerText = 'Add to cart';
 
         // eventListeners
+
+        favouriteIcon.addEventListener('click', function () {
+            let favouritesProductIndex = null;
+            let productInFavourites = favourites.find((element,index) =>{
+                favouritesProductIndex = index;
+                return element.id === product.id;
+            } );
+
+            if (productInFavourites == undefined) {
+                favourites.push({ id: product.id });
+                localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                this.setAttribute('class', 'fa-solid fa-heart fa-3x m-2');
+                Swal.fire({
+                    icon: "success",
+                    title: "Magnificent",
+                    text: `Wooow you liked ${product.name}`,
+                    timer: 1000
+                  });
+            }else{
+                 favourites.splice(favouritesProductIndex,1);
+                 localStorage.setItem('ecommerce-favourites', JSON.stringify(favourites));
+                this.setAttribute('class', 'fa-regular fa-heart fa-3x m-2');
+                Swal.fire({
+                    icon: "success",
+                    title: "Oops...",
+                    text: `Product has been deleted from favourites`,
+                    timer: 1000
+                  });
+            }
+
+        });
+
 
         addToCartButton.addEventListener('click', function () {
 
