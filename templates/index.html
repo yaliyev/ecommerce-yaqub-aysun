@@ -63,12 +63,12 @@
     <section class="header__section2">
       <div class="container d-flex align-items-center justify-content-between">
         <div class="header__section2__left">
-          <h1 class="navbar-brand">Snobella</h1>
+          <h1 id="logoBtn" class="navbar-brand">Snobella</h1>
         </div>
         <div class="header__section2__middle">
           <form action="#" class="formSearch d-flex align-items-center justify-content-center">
             <input type="text" id="searchInpt" class="form-control" placeholder="Search all product" />
-            <i class="fa-solid fa-magnifying-glass searchGlasses"></i>
+            <i id="searchInptBtn" class="fa-solid fa-magnifying-glass searchGlasses"></i>
           </form>
         </div>
         <div class="header__section2__right d-flex align-items-center justify-content-center column-gap-4">
@@ -84,30 +84,34 @@
           </div>
 
           <div class="wishlist">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <g clip-path="url(#clip0_1_1252)">
-                <path
-                  d="M22.0718 3.96971C19.4616 1.36022 15.2154 1.36022 12.6059 3.96971L11.9998 4.57546L11.394 3.96971C8.78456 1.35987 4.53796 1.35987 1.92847 3.96971C-0.628033 6.52621 -0.644634 10.5785 1.88997 13.3961C4.20171 15.9649 11.0196 21.5149 11.3089 21.7498C11.5053 21.9094 11.7416 21.9871 11.9765 21.9871C11.9843 21.9871 11.992 21.9871 11.9994 21.9868C12.2424 21.9981 12.4872 21.9147 12.69 21.7498C12.9792 21.5149 19.7979 15.9649 22.1103 13.3957C24.6446 10.5785 24.628 6.52621 22.0718 3.96971ZM20.535 11.9783C18.7326 13.9806 13.7782 18.1103 11.9994 19.5758C10.2207 18.1107 5.26733 13.9813 3.46527 11.9787C1.69712 10.0134 1.68052 7.21461 3.42677 5.46836C4.31862 4.57687 5.48985 4.13077 6.66108 4.13077C7.83231 4.13077 9.00355 4.57652 9.89539 5.46836L11.2277 6.80066C11.3863 6.95925 11.5862 7.0539 11.796 7.08711C12.1365 7.16022 12.5059 7.06521 12.7708 6.80101L14.1038 5.46836C15.8879 3.68502 18.7898 3.68538 20.5728 5.46836C22.3191 7.21461 22.3025 10.0134 20.535 11.9783Z"
-                  fill="#273142" fill-opacity="0.9" />
-              </g>
-              <defs>
-                <clipPath id="clip0_1_1252">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-            <a href="#"> <span>Wishlist</span></a>
+           
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <g clip-path="url(#clip0_1_1252)">
+                  <path
+                    d="M22.0718 3.96971C19.4616 1.36022 15.2154 1.36022 12.6059 3.96971L11.9998 4.57546L11.394 3.96971C8.78456 1.35987 4.53796 1.35987 1.92847 3.96971C-0.628033 6.52621 -0.644634 10.5785 1.88997 13.3961C4.20171 15.9649 11.0196 21.5149 11.3089 21.7498C11.5053 21.9094 11.7416 21.9871 11.9765 21.9871C11.9843 21.9871 11.992 21.9871 11.9994 21.9868C12.2424 21.9981 12.4872 21.9147 12.69 21.7498C12.9792 21.5149 19.7979 15.9649 22.1103 13.3957C24.6446 10.5785 24.628 6.52621 22.0718 3.96971ZM20.535 11.9783C18.7326 13.9806 13.7782 18.1103 11.9994 19.5758C10.2207 18.1107 5.26733 13.9813 3.46527 11.9787C1.69712 10.0134 1.68052 7.21461 3.42677 5.46836C4.31862 4.57687 5.48985 4.13077 6.66108 4.13077C7.83231 4.13077 9.00355 4.57652 9.89539 5.46836L11.2277 6.80066C11.3863 6.95925 11.5862 7.0539 11.796 7.08711C12.1365 7.16022 12.5059 7.06521 12.7708 6.80101L14.1038 5.46836C15.8879 3.68502 18.7898 3.68538 20.5728 5.46836C22.3191 7.21461 22.3025 10.0134 20.535 11.9783Z"
+                    fill="#273142" fill-opacity="0.9" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_1252">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+               <span>Wishlist</span></a>
           </div>
           <div class="basket">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M19.6667 6.33337H5C3.89543 6.33337 3 7.2288 3 8.33337V20.3334C3 21.4379 3.89543 22.3334 5 22.3334H19.6667C20.7712 22.3334 21.6667 21.4379 21.6667 20.3334V8.33337C21.6667 7.2288 20.7712 6.33337 19.6667 6.33337Z"
-                stroke="#3D4655" stroke-width="2" stroke-linecap="square" />
-              <path
-                d="M7 9V6.33333C7 4.91885 7.5619 3.56229 8.5621 2.5621C9.56229 1.5619 10.9188 1 12.3333 1C13.7478 1 15.1044 1.5619 16.1046 2.5621C17.1048 3.56229 17.6667 4.91885 17.6667 6.33333V9"
-                stroke="#3D4655" stroke-width="2" stroke-linecap="round" />
-            </svg>
-            <a href="#"> <span>Basket</span></a>
+            
+            <a href="shopping-bag.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M19.6667 6.33337H5C3.89543 6.33337 3 7.2288 3 8.33337V20.3334C3 21.4379 3.89543 22.3334 5 22.3334H19.6667C20.7712 22.3334 21.6667 21.4379 21.6667 20.3334V8.33337C21.6667 7.2288 20.7712 6.33337 19.6667 6.33337Z"
+                  stroke="#3D4655" stroke-width="2" stroke-linecap="square" />
+                <path
+                  d="M7 9V6.33333C7 4.91885 7.5619 3.56229 8.5621 2.5621C9.56229 1.5619 10.9188 1 12.3333 1C13.7478 1 15.1044 1.5619 16.1046 2.5621C17.1048 3.56229 17.6667 4.91885 17.6667 6.33333V9"
+                  stroke="#3D4655" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <span>Basket</span></a>
           </div>
         </div>
       </div>
@@ -116,12 +120,12 @@
     <section class="header__section3 mt-4 mb-4">
       <div class="container">
         <ul class="links d-flex align-items-start justify-content-start column-gap-5">
-          <li><a href="#">Evening bags</a></li>
-          <li><a href="#">Shoulder bag</a></li>
-          <li><a href="#">Backpack</a></li>
-          <li><a href="#">Handbag</a></li>
-          <li><a href="#">Postman bag</a></li>
-          <li><a href="#">Belt bags</a></li>
+          <li><a href="search-result.html">Evening bags</a></li>
+          <li><a href="search-result.html">Shoulder bag</a></li>
+          <li><a href="search-result.html">Backpack</a></li>
+          <li><a href="search-result.html">Handbag</a></li>
+          <li><a href="search-result.html">Postman bag</a></li>
+          <li><a href="search-result.html">Belt bags</a></li>
         </ul>
       </div>
     </section>
@@ -140,7 +144,7 @@
             teachings of the great explorer
           </p>
 
-          <button class="btn btn-success px-5 py-2 ">Shop now</button>
+          <button onclick="window.location.replace('search-result.html')" class="btn btn-success px-5 py-2 ">Shop now</button>
 
         </div>
         <div class="col-lg-6 col-md-4 col-sm-12">
@@ -238,7 +242,7 @@
               </div>
               <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                 <img class="w-100"
-                  src="../assets/images/kisspng-handbag-baggage-hand-luggage-leather-women-bag-5acd4069b62017 1.png"
+                  src="../assets/images/kisspng-handbag-baggage-hand-luggage-leather-women-bag-5acd4069b620171.png"
                   alt="">
               </div>
             </div>
@@ -254,7 +258,7 @@
               </div>
               <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                 <img class="w-100"
-                  src="../assets/images/kisspng-chanel-gucci-handbag-wallet-sell-my-gucci-bag-www-pixshark-com-images-galler-5b7def98c254a0 2.png"
+                  src="../assets/images/kisspng-chanel-gucci-handbag-wallet-sell-my-gucci-bag-www-pixshark-com-images-galler-5b7def98c254a02.png"
                   alt="">
               </div>
             </div>
@@ -270,7 +274,7 @@
               </div>
               <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                 <img class="w-100"
-                  src="../assets/images/kisspng-bag-laptop-backpack-knomo-beauchamp-5b0bf6a37cde46 7.png"
+                  src="../assets/images/kisspng-bag-laptop-backpack-knomo-beauchamp-5b0bf6a37cde467.png"
                   alt="">
               </div>
             </div>
@@ -286,7 +290,7 @@
               </div>
               <div class="col-12 col-xxl-6 col-xl-6 col-lg-6 col-md-12">
                 <img class="w-100"
-                  src="../assets/images/5a34e83495d908 2.png"
+                  src="../assets/images/5a34e83495d9082.png"
                   alt="">
               </div>
             </div>
@@ -304,104 +308,8 @@
         <a href="search-result.html" class="my-3 text-dark">View all products <i class="fa-solid fa-arrow-right"></i> </a>
       </div>
 
-          <div class="row">
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                
-
-                  <div class="product-current-status d-flex justify-content-between ">
-                    <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                    <i class="fa-regular fa-heart fa-3x m-2"></i>
-                  </div>
-                  <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-bag-laptop-backpack-knomo-beauchamp-5b0bf6a37cde46 7.png" alt="Card image cap">
-                  <div class="card-body">
-                    <div class="stars">
-                      <i class="fa-regular fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                      <i class="fa-regular fa-star"></i>
-                    </div>
-                    <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                      undertakes laborious physical physical </h5>
-  
-  
-                      <p class="card-text">
-                        <span class="product-price text-danger">$130.00</span>
-                        <span class="product-annual-price-information text-secondary">From $340.00</span>
-                      </p>
-  
-  
-                    <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                  </div>
-                
-                
-              </div>
-              </div>
-            </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-handbag-satchel-leather-coach-inc-tapestry-5adb94da175541 2.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-
-
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-
-
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-handbag-baggage-hand-luggage-leather-women-bag-5acd4069b62017 1.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-
-
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-
-
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-              </div>
-            </div>
+          <div id="featured-products-cards" class="row">
+           
            </div>
 
 
@@ -418,100 +326,8 @@
         <h2 class="my-3">Bestseller</h2>
         <a href="search-result.html" class="my-3 text-dark">View all products <i class="fa-solid fa-arrow-right"></i> </a>      </div>
        
-          <div class="row">
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-chanel-gucci-handbag-wallet-sell-my-gucci-bag-www-pixshark-com-images-galler-5b7def98c254a0 2.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-    
-    
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-    
-    
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-lancel-handbag-leather-clothing-accessories-women-bag-5abc8960466306 1.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-    
-    
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-    
-    
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/5a34e83495d908 2.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-    
-    
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-    
-    
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-              </div>
-            </div>
+          <div id="bestseller-products-cards" class="row">
+           
            </div>
 
         
@@ -528,100 +344,8 @@
         <h2 class="my-3">Discount Products</h2>
         <a href="search-result.html" class="my-3 text-dark">View all products <i class="fa-solid fa-arrow-right"></i> </a>      </div>
 
-          <div class="row">
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-bag-laptop-backpack-knomo-beauchamp-5b0bf6a37cde46 7.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-
-
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-
-
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-handbag-baggage-hand-luggage-leather-women-bag-5acd4069b62017 1.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-
-
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-
-
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="col-12 col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 mt-3">
-              <div class="product">
-              <div class="card">
-                <div class="product-current-status d-flex justify-content-between ">
-                  <button class="product-current-status-button btn btn-success m-2 py-2 px-4">New</button>
-                  <i class="fa-regular fa-heart fa-3x m-2"></i>
-                </div>
-                <img class="card-img-top w-100 product-image" src="../assets/images/kisspng-bag-laptop-backpack-knomo-beauchamp-5b0bf6a37cde46 7.png" alt="Card image cap">
-                <div class="card-body">
-                  <div class="stars">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                  </div>
-                  <h5 class="card-title">Shoulder Bag Leather Bag Leather 
-                    undertakes laborious physical physical </h5>
-
-
-                    <p class="card-text">
-                      <span class="product-price text-danger">$130.00</span>
-                      <span class="product-annual-price-information text-secondary">From $340.00</span>
-                    </p>
-
-
-                  <button href="#" class="product-add-to-cart btn btn-secondary text-secondary  bg-light w-100">Add to cart</button>
-                </div>
-              </div>
-              </div>
-            </div>
+          <div id="discount-products-cards" class="row">
+           
            </div>
 
 
@@ -819,10 +543,15 @@
   </footer>
 
   
-  <!-- Bootstrap JS CDN -->
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.1/axios.min.js" integrity="sha512-m9S8W3a9hhBHPFAbEIaG7J9P92dzcAWwM42VvJp5n1/M599ldK6Z2st2SfJGsX0QR4LfCVr681vyU5vW8d218w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../assets/scripts/header.js"></script>
+  <script type="module" src="../assets/scripts/product-request.js"></script>
+  <script type="module" src="../assets/scripts/main.js"></script>
 </body>
 
 </html>
